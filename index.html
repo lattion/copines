@@ -1,3 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Coooopiiiinnnnes - Site Officiel</title>
+    <style>
+        :root {
+            --primary-color: #ff007f; /* Rose fluo */
+            --secondary-color: #7000ff; /* Violet */
+            --bg-color: #121212;
+            --text-color: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* --- HEADER & REFRAIN --- */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--bg-color) 0%, #2a0845 100%);
+            border-bottom: 5px solid var(--primary-color);
+        }
+
+        .title {
+            font-size: 4em;
+            margin: 0 0 20px 0;
+            text-shadow: 0 0 10px var(--primary-color);
+        }
+
+        .refrain {
+            font-size: 1.2em;
+            font-style: italic;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            border-left: 4px solid var(--primary-color);
+            border-right: 4px solid var(--secondary-color);
+            white-space: pre-line; /* Conserve les retours à la ligne */
+        }
+
+        /* --- SQUAD (LES PROFILS) --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .squad-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #1e1e1e;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+            border-top: 3px solid var(--secondary-color);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-top-color: var(--primary-color);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .lyrics {
+            font-family: 'Courier New', Courier, monospace;
+            background: #0a0a0a;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.9em;
+            color: #ccc;
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .bio {
+            font-size: 0.95em;
+        }
+
+        /* --- DISCOGRAPHIE (SONS) --- */
+        .music-section {
+            background: #1a1a1a;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .covers {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .covers img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(112, 0, 255, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .covers img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 0, 127, 0.6);
+        }
+
+        /* --- GALERIE (14 IMAGES) --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #333; /* Placeholder avant chargement */
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover {
+            opacity: 0.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #0a0a0a;
+            margin-top: 50px;
+        }
+    </style>
+</head>
 <body>
-<h1> yoooo gros </h1>
+
+    <header>
+        <h1 class="title">Les Coooopiiiinnnnes</h1>
+        <div class="refrain">
+            [Refrain]
+            coooopiiiinnnnes
+            si tu sais pas qui on est on est les cooooopiiiinnneees
+            si tu veux parler de b-word c’est avec les coooopppiiinnnes
+            cooopiiinnnes coooopinnnnes cooopiinnneees
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 20px;">Le Crew</h2>
+        
+        <div class="squad-grid">
+            <div class="card">
+                <h3>Gugus</h3>
+                <div class="lyrics">
+                    Oui c’est moi, gugus, vous m’avez surement remarqué
+                    Chuis deso je sais qu’c’est pas bien de tromper
+                    Chuis posé dans mon appart à Neuchatel tu connais
+                    Mais je rentre quand même voir RM à Saillon c’est carré
+                    J’arrive ya le noir et patcholle mon préféré
+                </div>
+                <div class="bio">
+                    <p>Toujours entre deux cantons, le pied sur l'accélérateur et l'esprit posé. Gugus, c'est l'électron libre de la bande. Qu'il soit en train de chiller dans son QG neuchâtelois ou de redescendre sur Saillon pour capter RM, il ne passe jamais inaperçu. Avec le Noir et Patcholle dans les parages, la soirée est toujours assurée de déraper... dans le bon sens.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Pipoudou</h3>
+                <div class="lyrics">
+                    Coucou coucou c’est pipoudou,
+                    J’travaille chez Dé-Eux mais j’ai toujours pas lâché la casa
+                    Je gagne des thunes je khalass tout le monde à coup de vodka
+                    Moi et l’armée moi et l’armée toi-même tu sais tu connais déjà
+                    Chuis toujours la, j’prends quand vous voulez mon Opel Corsa
+                </div>
+                <div class="bio">
+                    <p>Le ministre des finances et le pilote officiel du crew ! Pipoudou gère les affaires chez Dé-Eux le jour, et régale l'équipe à grands coups de shots la nuit. Entre deux anecdotes légendaires sur l'armée, tu le trouveras au volant de sa fidèle Opel Corsa, toujours prêt à embarquer l'équipe pour la prochaine expédition. C'est le sang, tout simplement.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Tathilde</h3>
+                <div class="lyrics">
+                    Helloooo helloooo c’est moi tathilde, 
+                    Jdébarque en polo même si elle arrive pas en haut
+                    Jaime les tatoos, d’ailleurs regarde ils sont trop beaux
+                    J’ai le même niveau que ton gadjo, regarde mes mains je fais d’lergo
+                    Coucou les cooopiiiiiines et bisoux mateo
+                </div>
+                <div class="bio">
+                    <p>L'âme artistique et l'ergo attitrée des copines. Tathilde débarque avec une dégaine unique, sa Polo qui fait de la résistance, et ses tatouages qui racontent des histoires. Ne te fie pas aux apparences, elle gère autant que ton gadjo (voire plus). Toujours là pour distribuer les good vibes et balancer des bisous à Mateo. Une vraie icône de la street.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Latchoup</h3>
+                <div class="lyrics">
+                    Yo la miff c’est latchoup,
+                    Chuis dans la zone, posé Rue de la Carriere à Fribourg
+                    Ma carrière décolle, je fais ce son pour tous les gens autour
+                    Ma meuf m’a dit, tu sais, t’es le plus beau à ce jour
+                    L’informatique ça me connait, j’ai toujours la mise à jour
+                </div>
+                <div class="bio">
+                    <p>Le cerveau tech et l'étoile montante de Fribourg. Depuis la Rue de la Carrière, Latchoup code l'avenir du groupe tout en préparant la montée en puissance du crew. Validé par sa meuf et redouté par les bugs informatiques, il s'assure que tout le monde reste à la page. C'est d'ailleurs grâce à ses mises à jour que ce site est en ligne, tu captes ?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="music-section">
+        <h2>Écoutez nos sons</h2>
+        <p>Cliquez sur les covers pour streamer la légende.</p>
+        <div class="covers">
+            <a href="#" target="_blank"><img src="https://open.spotify.com/intl-fr/track/08w1iDTUneURKQD6OqGZDn?si=ab830e1808af4dad" alt="Cover 1"></a>
+            <a href="#" target="_blank"><img src="https://open.spotify.com/intl-fr/track/4zvVUpOSIulmuh7AwPWJY9?si=927a3adedfdc4c5c" alt="Cover 2"></a>
+            <a href="#" target="_blank"><img src="https://open.spotify.com/intl-fr/track/6FzXh95wzF6yB4nJVo0jc4?si=d0b332a26f77448f" alt="Cover 3"></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 style="text-align: center;">Archives des Copines (14 dossiers)</h2>
+        <div class="gallery-grid">
+            <img src="img/1.jpg" alt="Photo 1" class="gallery-item">
+            <img src="img/2.jpg" alt="Photo 2" class="gallery-item">
+            <img src="img/3.jpg" alt="Photo 3" class="gallery-item">
+            <img src="img/4.jpg" alt="Photo 4" class="gallery-item">
+            <img src="img/5.jpg" alt="Photo 5" class="gallery-item">
+            <img src="img/6.jpg" alt="Photo 6" class="gallery-item">
+            <img src="img/7.jpg" alt="Photo 7" class="gallery-item">
+            <img src="img/8.jpg" alt="Photo 8" class="gallery-item">
+            <img src="img/9.jpg" alt="Photo 9" class="gallery-item">
+            <img src="img/10.jpg" alt="Photo 10" class="gallery-item">
+            <img src="img/11.jpg" alt="Photo 11" class="gallery-item">
+            <img src="img/12.jpg" alt="Photo 12" class="gallery-item">
+            <img src="img/13.jpg" alt="Photo 13" class="gallery-item">
+            <img src="img/14.jpg" alt="Photo 14" class="gallery-item">
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Les Coooopiiiinnnnes. Fribourg - Neuchâtel - Saillon. Tous droits réservés.</p>
+    </footer>
+
 </body>
+</html>
