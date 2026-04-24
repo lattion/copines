@@ -1,0 +1,158 @@
+/* --- VARIABLES ET BASES --- */
+:root {
+    --primary-color: #ff007f;
+    --secondary-color: #7000ff;
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-bg: #1e1e1e;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Évite les barres de défilement horizontales */
+}
+
+/* --- SECTIONS EN QUINCONCE --- */
+.crew-container {
+    width: 100%;
+    /* Toute la largeur */
+    padding: 50px 0;
+}
+
+.person-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 450px;
+    padding: 60px 10%;
+    /* Marge sur les côtés pour la lisibilité */
+    box-sizing: border-box;
+    gap: 50px;
+}
+
+/* On inverse l'ordre une fois sur deux */
+.person-section:nth-child(even) {
+    flex-direction: row-reverse;
+    background: rgba(112, 0, 255, 0.05);
+    /* Léger fond violet pour différencier */
+}
+
+/* Style de l'image */
+.person-img-container {
+    flex: 1;
+    max-width: 500px;
+}
+
+.person-img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 0, 127, 0.3);
+    border: 3px solid var(--secondary-color);
+}
+
+/* Style du texte */
+.person-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.person-content h3 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.lyrics {
+    font-family: 'Courier New', monospace;
+    background: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--primary-color);
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+
+    .person-section,
+    .person-section:nth-child(even) {
+        flex-direction: column;
+        /* On empile sur mobile */
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .person-img-container {
+        max-width: 100%;
+    }
+}
+
+/* Garde ici tes anciens styles pour le header, la musique et la galerie... */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.title {
+    font-size: 3.5em;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.refrain {
+    font-size: 1.1em;
+    font-style: italic;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    white-space: pre-line;
+}
+
+.music-section {
+    background: #1a1a1a;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.covers {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.track img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+}
